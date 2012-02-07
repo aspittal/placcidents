@@ -1,1 +1,4 @@
 <p><%= @content %></p>
+<% @accident.each |a| do %>
+    <%= a.id %>
+<% end %>
