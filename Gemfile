@@ -35,3 +35,9 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Mechanize for scraping data
+gem 'mechanize'
+
+# Geocoder for retrieving lat and long
+gem 'geocoder'

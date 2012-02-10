@@ -1,4 +1,4 @@
-<p><%= @content %></p>
-<% @accident.each |a| do %>
-    <%= a.id %>
+<%= @accident_count %><br />
+<% @accident.each do |a| %>
+    <%= a.location %> - <%= a.latitude %> - <%= a.date %> - <%= a.fatalities %> <br />
 <% end %>

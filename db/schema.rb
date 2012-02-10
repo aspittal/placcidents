@@ -14,24 +14,17 @@
 ActiveRecord::Schema.define(:version => 20120207152645) do
 
   create_table "accidents", :force => true do |t|
-    t.date   "event_date"
-    t.string "location"
-    t.string "country"
-    t.float  "latitude"
-    t.float  "longitude"
-    t.string "airport_code"
-    t.string "airport_name"
-    t.string "injury_severity"
-    t.string "aircraft_damage"
-    t.string "aircraft_category"
-    t.string "make"
-    t.string "model"
-    t.string "air_carrier"
-    t.string "total_fatal_injuries"
-    t.string "total_serious_injuries"
-    t.string "total_minor_injuries"
-    t.string "total_uninjured"
-    t.string "weather_condition"
+    t.string  "checksum"
+    t.date    "date"
+    t.string  "location"
+    t.string  "operator"
+    t.string  "aircraft_type"
+    t.string  "registration"
+    t.integer "fatalities"
+    t.integer "total_passengers"
+    t.integer "ground_fatalities"
+    t.float   "latitude"
+    t.float   "longitude"
   end
 
 end
