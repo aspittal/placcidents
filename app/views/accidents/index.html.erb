@@ -1,23 +1,4 @@
-<h1>Listing accidents</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div id="map" style="height: 600px; width: 960px; "></div>
 <% @accidents.each do |accident| %>
-  <tr>
-    <td><%= accident.location %></td>
-    <td><%= link_to 'Show', accident %></td>
-    <td><%= link_to 'Edit', edit_accident_path(accident) %></td>
-    <td><%= link_to 'Destroy', accident, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+	<%= accident.date %> <%= accident.location %> <%= accident.fatalities %> <%= accident.latitude %> <%= accident.longitude %><br />
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Accident', new_accident_path %>

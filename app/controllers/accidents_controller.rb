@@ -2,7 +2,7 @@ class AccidentsController < ApplicationController
   # GET /accidents
   # GET /accidents.json
   def index
-    @accidents = Accident.all
+    @accidents = Accident.has_coordinates.order('date ASC')
 
     respond_to do |format|
       format.html # index.html.erb
