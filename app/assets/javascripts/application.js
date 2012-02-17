@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/bootstrap
 //= require leaflet/leaflet
+//= require jqueryui/jqueryui
 //= require_tree .

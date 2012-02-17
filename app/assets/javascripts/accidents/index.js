@@ -11,7 +11,6 @@ $(document).ready(function(){
 
 	$.ajax({
 		url: 'accidents.json',
-		dataType: 'json',
 		success: function(accidents) {
 			var centered = new L.LatLng(51.505, -0.09); // geographical point (longitude and latitude)
 			map.setView(centered, 2).addLayer(cloudmade);
@@ -26,7 +25,11 @@ $(document).ready(function(){
 		  				this.fatalities + ' (' + this.ground_fatalities + ')'
 		 		 	)
 		  		);
-			})
+			});
 		}
 	});
+
+	$("#slider").slider({value: 1916, min: 1916, max: 2012, step: 1, slide: function(event, ui) {
+		console.log(ui.value);
+	}});
 });
