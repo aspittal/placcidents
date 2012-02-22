@@ -12,6 +12,6 @@
  *= require bootstrap/css/bootstrap-responsive
  *= require bootstrap/css/bootstrap
  *= require leaflet/leaflet
- *= require jqueryui/ui-lightness/jquery-ui
  *= require_tree .
+ *= require jqueryui/redmond/jqueryui
 */

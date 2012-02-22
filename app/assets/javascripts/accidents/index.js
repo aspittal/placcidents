@@ -30,6 +30,7 @@ $(document).ready(function(){
 	////////////////////////////////////////////////////////////////
 
 	$("#slider").slider({
+		range: "min",
 		value: currentYear,
 		min: minYear,
 		max: maxYear,
