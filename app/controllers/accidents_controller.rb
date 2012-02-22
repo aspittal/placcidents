@@ -2,7 +2,11 @@ class AccidentsController < ApplicationController
   # GET /accidents
   # GET /accidents.json
   def index
-    @accidents = Accident.has_coordinates.order('date ASC')
+    if params[:year]
+        @accidents = Accident.has_coordinates.order('date ASC').where("date LIKE '%" + params[:year] + "%'")
+    else
+        @accidents = Accident.has_coordinates.order('date ASC')
+    end
 
     respond_to do |format|
       format.html # index.html.erb

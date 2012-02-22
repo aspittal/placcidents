@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 #map {
 	height: 500px;
+	border: 1px solid #111;
+	margin: 15px 0 0 0;
+}
+
+#slider {
+	width: 100%;
+	margin-top: 15px;
+	position: relative;
+	float: left;
+	text-align: center;
+}
+
+#currentYear {
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Pacifico', cursive;
+	font-size: 3em;
+	font-weight: 200;
+	color: #6699DD;
 }
