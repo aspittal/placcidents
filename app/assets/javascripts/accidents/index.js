@@ -9,14 +9,14 @@ $(document).ready(function(){
 	var maxYear = 2012;
 	var accidentColor = 'red';
 	var accidentFillColor = '#f03';
-	var accidentFillOpacity = 0.2;
+	var accidentFillOpacity = 0.25;
 	var minRadius = 2;
 	var maxRadius = 25;
 
 	// Map Initialization
 	var map = new L.Map('map');
 	var yearLayerGroups = [];
-	var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/47c86430e02146d78826552cd35576cf/997/256/{z}/{x}/{y}.png';
+	var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/47c86430e02146d78826552cd35576cf/27169/256/{z}/{x}/{y}.png';
 	var cloudmadeAttrib =
 	  'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade';
 	var cloudmade = new L.TileLayer(

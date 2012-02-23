@@ -13,5 +13,5 @@
  *= require bootstrap/css/bootstrap
  *= require leaflet/leaflet
  *= require_tree .
- *= require jqueryui/redmond/jqueryui
+ *= require jqueryui/dark-hive/jquery-ui
 */
