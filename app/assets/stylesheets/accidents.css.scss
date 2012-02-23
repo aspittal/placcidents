@@ -4,6 +4,13 @@
 
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
+.container-fluid {
+	max-width: 940px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+
 #map {
 	height: 500px;
 	border: 1px solid #111;
