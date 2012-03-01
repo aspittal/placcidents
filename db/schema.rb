@@ -11,20 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120207152645) do
+ActiveRecord::Schema.define(:version => 20120214203110) do
 
   create_table "accidents", :force => true do |t|
-    t.string  "checksum"
-    t.date    "date"
-    t.string  "location"
-    t.string  "operator"
-    t.string  "aircraft_type"
-    t.string  "registration"
-    t.integer "fatalities"
-    t.integer "total_passengers"
-    t.integer "ground_fatalities"
-    t.float   "latitude"
-    t.float   "longitude"
+    t.string   "checksum"
+    t.date     "date"
+    t.string   "location"
+    t.string   "operator"
+    t.string   "aircraft_type"
+    t.string   "registration"
+    t.integer  "fatalities"
+    t.integer  "total_passengers"
+    t.integer  "ground_fatalities"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
 end

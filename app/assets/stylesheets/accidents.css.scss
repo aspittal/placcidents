@@ -16,20 +16,41 @@
 	border: 1px solid #111;
 }
 
+.row-fluid {
+	margin-top: 15px;
+}
+
 #slider {
 	width: 100%;
-	margin-top: 15px;
+	margin-bottom: 15px;
 	position: relative;
 	float: left;
+}
+
+#currentYearText {
+	margin-top: 15px;
+}
+
+.emphasis {
+	font-family: 'Pacifico', cursive;
+	font-size: 12em;
+	font-weight: 400;
+	color: #000;
+}
+
+.red {
+	color: #F01;
+}
+
+.textCenter {
 	text-align: center;
 }
 
-#currentYear {
-	text-align: center;
+.marginTop15 {
+	margin-top: 15px;
 }
 
 h1 {
-	margin-top: 15px;
 	font-family: 'Pacifico', cursive;
 	font-size: 4em;
 	font-weight: 200;
@@ -37,9 +58,5 @@ h1 {
 }
 
 h2 {
-	margin-top: 5px;
-	font-family: 'Pacifico', cursive;
-	font-size: 3.5em;
-	font-weight: 300;
 	color: #000;
 }

@@ -12,7 +12,7 @@ namespace :import do
 			link_table.each do |year|
 				year = year.gsub(/[^0-9]/, '')
 				if year.length > 0 && year.length < 6
-					# some ridiculous code because of a bug on his webpage
+					# some ridiculous code because of a "bug" on his webpage
 					if year == '1929'
 						link = year + '/' + year + '.htm'
 					else 
@@ -38,10 +38,19 @@ namespace :import do
 						data[:aircraft_type] = type_reg.split('|')[0].gsub(/[\s\t\r\n\f]/m, ' ').strip
 						data[:registration] = type_reg.split('|')[1].gsub(/[\s\t\r\n\f]/, ' ').strip
 
-						fatals = column_data[3].gsub(/<.*?>(.*)?\/(.*)?\((.*)?\)<.*/, "\\1|\\2|\\3")
-						data[:fatalities] = fatals.split('|')[0]
-						data[:total_passengers] = fatals.split('|')[1]
-						data[:ground_fatalities] = fatals.split('|')[2]
+						# I really need a better data source, this site doesn't have ground fatalities in
+						# 1930, so we need a special case. A better structured regex could probably handle this case
+						if year != '1930'
+							fatals = column_data[3].gsub(/<.*?>(.*)?\/(.*)?\((.*)?\)<.*/, "\\1|\\2|\\3")
+							data[:fatalities] = fatals.split('|')[0]
+							data[:total_passengers] = fatals.split('|')[1]
+							data[:ground_fatalities] = fatals.split('|')[2]
+						else 
+							fatals = column_data[3].gsub(/<.*?>(.*)?\/(.*)?<.*/, "\\1|\\2")
+							data[:fatalities] = fatals.split('|')[0]
+							data[:total_passengers] = fatals.split('|')[1]
+							data[:ground_fatalities] = 0;
+						end
 
 						data[:checksum] = Digest::MD5.hexdigest(data.map{ |data| data.join('|')}.join('|'))
 						# Make sure we don't insert duplicate data, use the checksum
@@ -50,7 +59,7 @@ namespace :import do
 							p data
 							Accident.new(data).save
 						else
-							p "Duplicate data not inserted"
+							p data[:date] + " " + data[:location] + " Duplicate data not inserted"
 						end
 					end
 				end

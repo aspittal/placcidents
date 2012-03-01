@@ -2,7 +2,7 @@
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand">The Disaster Network</a>
+				<a class="brand">Visualasters</a>
 				<ul class="nav">
 					<li class="active"><a href="#">Placcidents</a></li>
 				</ul>
@@ -19,12 +19,25 @@
 	</div>
 	<div class="row-fluid">
 		<div class="span12">
-			<div id="currentYear"><h2 id="currentYearText"></h2></div>
-		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="span12">
-			<div id="slider"></div>
+			<div id="slider" class="textCenter"></div>
+			<div class="row-fluid">
+				<div class="span4">
+					<h2>View Data By Year</h2>
+					<p>Drag the slider above to visualize plane accident data by year. You will notice that the map and statistics below will be updated accordingly.</p>
+				</div>
+				<div class="span8">
+					<div id="currentYearText" class="emphasis textCenter"></div>
+				</div>
+			</div>	
+			<div class="row-fluid">
+				<div class="span4">
+					<h2>Fatalities</h2>
+					<p>The total number of deaths for the given year is displayed on the right, this is a combined number of passengers and people who died on the ground as a result of the crash.</p>
+				</div>
+				<div class="span8">
+					<div id="humanCounter" class="emphasis textCenter marginTop15 red"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
