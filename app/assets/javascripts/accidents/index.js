@@ -6,7 +6,7 @@ $(document).ready(function(){
 	// Variables!
 	var currentYear = 1908;
 	var minYear = 1908;
-	var maxYear = 2012;
+	var maxYear = 2014;
 	var accidentColor = 'red';
 	var accidentFillColor = '#f03';
 	var accidentFillOpacity = 0.25;

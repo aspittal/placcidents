@@ -7,7 +7,6 @@ class AccidentsController < ApplicationController
     else
         @accidents = Accident.has_coordinates.order('date ASC')
     end
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @accidents }

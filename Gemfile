@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'rails', '3.2.1'
 
 # Bundle edge Rails instead:
@@ -18,8 +17,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
+gem "jquery-rails", "~>1.0.17"
+gem 'rails_12factor'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

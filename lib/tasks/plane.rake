@@ -57,7 +57,11 @@ namespace :import do
 						exists = Accident.where('checksum = ?', data[:checksum])
 						if exists.empty? 
 							p data
-							Accident.new(data).save
+							begin
+								Accident.new(data).save
+							rescue Exception
+								p data[:date] + " " + data[:location] + " Something was wrong with this data! Not Inserted."
+							end
 						else
 							p data[:date] + " " + data[:location] + " Duplicate data not inserted"
 						end
